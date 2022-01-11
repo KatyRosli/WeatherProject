@@ -158,3 +158,23 @@ h2 {
   font-size: 16px;
   font-weight: 700;
 }
+.github-link {
+  text-align: center;
+}
+
+.github {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #11113a;
+  padding-bottom: 80px;
+  text-decoration: none;
+}
+
+.name {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #11113a;
+  text-decoration: none;
+}
