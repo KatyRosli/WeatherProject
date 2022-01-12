@@ -1,33 +1,18 @@
-// show day, date & time
-let now = new Date();
-
-let h3 = document.querySelector("h3");
-
-let date = now.getDate();
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let day = days[now.getDay()];
-let months = [
-  "Jan",
-  "Feb",
-  "March",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let month = months[now.getMonth()];
-let hour = now.getHours();
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+function formatDate(timestamp) {
+  //calculate the date
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
-let time = `${hour}:${minutes}`;
-h3.innerHTML = `${day}, ${date} ${month}, ${time}`;
 
 // display city name after sumbit
 //display search result city & temperature
@@ -81,6 +66,8 @@ function showTemperature(response) {
   let windElement = document.querySelector("#wind");
   // show weather icon based on the weather
   let iconElement = document.querySelector("#icon");
+  // show the day, date & time
+  let dateElement = document.querySelector("#date");
 
   displayValueElement.innerHTML = temperature;
   cityElement.innerHTML = response.data.name;
@@ -90,6 +77,7 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function showPosition(position) {
