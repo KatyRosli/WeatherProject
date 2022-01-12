@@ -1,7 +1,7 @@
 // show day, date & time
 let now = new Date();
 
-let h2 = document.querySelector("h2");
+let h3 = document.querySelector("h3");
 
 let date = now.getDate();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -27,7 +27,7 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 let time = `${hour}:${minutes}`;
-h2.innerHTML = `${day}, ${date} ${month}, ${time}`;
+h3.innerHTML = `${day}, ${date} ${month}, ${time}`;
 
 // display city name after sumbit
 //display search result city & temperature
@@ -69,14 +69,20 @@ function convertTemperature() {
 let convertButton = document.querySelector("#view-button");
 convertButton.addEventListener("click", convertTemperature);
 
-//show current location & temperature
+//show current location & temperature & show from search
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let displayValueElement = document.querySelector("#display-value");
   let cityElement = document.querySelector("#city");
+  // show weather icon based on the weather
+  let iconElement = document.querySelector("#icon");
 
   displayValueElement.innerHTML = `${temperature}`;
   cityElement.innerHTML = `${response.data.name}`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showPosition(position) {

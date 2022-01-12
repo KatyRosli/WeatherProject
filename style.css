@@ -28,21 +28,31 @@
 }
 h1 {
   text-align: center;
-  color: #f4f7f8;
   font-weight: 500;
   font-size: 60px;
+  color: #f4f7f8;
   padding: 4px;
   margin-top: 64px;
 }
 h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 60px;
+  color: #f4f7f8;
+}
+h3 {
   text-align: center;
   color: #f4f7f8;
   font-weight: 400;
   font-size: 16px;
   margin: 24px;
 }
+.weathericon {
+  display: block;
+  margin: auto;
+}
 .btn-primary {
-  background: #ffdf77;
+  background: #ec552b;
   border: none;
   border-radius: 8px;
   color: #06071f;
@@ -50,7 +60,7 @@ h2 {
   float: right;
 }
 .btn-primary:hover {
-  background: #ffdf77;
+  background: #ec552b;
   border: none;
   border-radius: 8px;
   color: #06071f;
@@ -60,9 +70,9 @@ h2 {
 .btn-outline-primary {
   display: block;
   margin: auto;
-  border-color: #ffdf77;
+  border-color: #ec552b;
   border-radius: 8px;
-  color: #ffdf77;
+  color: #ec552b;
   padding: 8px 16px;
   text-align: center;
   font-size: 16px;
@@ -70,8 +80,8 @@ h2 {
 .btn-outline-primary:hover {
   display: block;
   margin: auto;
-  border-color: #ffdf77;
-  background-color: #ffdf77;
+  border-color: #ec552b;
+  background-color: #ec552b;
   border-radius: 8px;
   color: #06071f;
   padding: 8px 16px;
