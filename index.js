@@ -71,14 +71,21 @@ convertButton.addEventListener("click", convertTemperature);
 
 //show current location & temperature & show from search
 function showTemperature(response) {
+  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let displayValueElement = document.querySelector("#display-value");
   let cityElement = document.querySelector("#city");
+  // show humidity
+  let humidityElement = document.querySelector("#humidity");
+  // show wind
+  let windElement = document.querySelector("#wind");
   // show weather icon based on the weather
   let iconElement = document.querySelector("#icon");
 
-  displayValueElement.innerHTML = `${temperature}`;
-  cityElement.innerHTML = `${response.data.name}`;
+  displayValueElement.innerHTML = temperature;
+  cityElement.innerHTML = response.data.name;
+  humidityElement.innerHTML = ` ${response.data.main.humidity}`;
+  windElement.innerHTML = ` ${Math.round(response.data.wind.speed)}`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
