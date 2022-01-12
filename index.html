@@ -26,9 +26,10 @@
 
   <body>
     <div class="mainContainer">
+
       <form class="form-inline" id="search-form">
         <input
-          class="form-control mr-sm-2"
+          class="form-control"
           id="city-input"
           type="search"
           placeholder="Search city..."
@@ -36,21 +37,19 @@
           autocomplete="off"
           aria-label="Search"
         />
-      </form>
-      <button type="button" id="current-location" class="btn btn-primary">
-        <strong>Current Location<spand id="user-current-location"></span></stong>
+        <button type="button" id="current-location" class="btn btn-primary">
+        <i class="fas fa-map-marker-alt"></i><spand id="user-current-location"></span>
         </button>
-
-      <button type="button" id="view-button" class="btn btn-outline-primary">
-        <strong>View in °<span id="view-temperature-letter">F</span></strong>
-      </button>
-
+      </form>
+      
       <h1>
         <span id="city">Täby</span> <br />
         ⛅ <br />
 				<span id="display-value">-1</span>°<span id="display-letter">C</span>
       </h1>
-
+      <div><button type="button" id="view-button" class="btn btn-outline-primary">
+        <strong>View in °<span id="view-temperature-letter">F</span></strong>
+      </button> </div>
       <h2>Mon, 3 Jan, 13:10</h2>
       <div class="row justify-content-center">
         <div class="col-sm-6">

@@ -8,7 +8,14 @@
 }
 
 .form-inline {
-  margin: 32px auto;
+  margin: 24px 0px 24px 0px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .form-control {
   padding: 16px;
@@ -16,6 +23,8 @@
   font-size: 16px;
   background-color: #353563;
   border-color: #353563;
+  width: 480px;
+  margin: 0px 32px 0px 4px;
 }
 h1 {
   text-align: center;
@@ -23,7 +32,7 @@ h1 {
   font-weight: 500;
   font-size: 60px;
   padding: 4px;
-  margin-top: 24px;
+  margin-top: 64px;
 }
 h2 {
   text-align: center;
@@ -37,22 +46,20 @@ h2 {
   border: none;
   border-radius: 8px;
   color: #06071f;
-  padding: 8px 16px;
-  text-align: center;
-  font-size: 16px;
-  margin-right: 32px;
+  padding: 16px 24px;
+  float: right;
 }
 .btn-primary:hover {
   background: #ffdf77;
   border: none;
   border-radius: 8px;
   color: #06071f;
-  padding: 8px 16px;
-  text-align: center;
-  font-size: 16px;
-  margin-right: 32px;
+  padding: 16px 24px;
+  float: right;
 }
 .btn-outline-primary {
+  display: block;
+  margin: auto;
   border-color: #ffdf77;
   border-radius: 8px;
   color: #ffdf77;
@@ -61,6 +68,8 @@ h2 {
   font-size: 16px;
 }
 .btn-outline-primary:hover {
+  display: block;
+  margin: auto;
   border-color: #ffdf77;
   background-color: #ffdf77;
   border-radius: 8px;
