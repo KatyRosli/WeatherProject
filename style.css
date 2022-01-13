@@ -2,13 +2,13 @@
   background-image: linear-gradient(to top, #06071f 0%, #0c0c40 100%);
   max-width: 640px;
   margin: 24px auto;
-  padding: 8px 32px;
+  padding: 32px 32px;
   border-radius: 24px;
   font-family: "Karla", sans-serif;
 }
 
 .form-inline {
-  margin: 24px 0px 24px 0px;
+  margin: 8px 0px 24px 0px;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +108,6 @@ h3 {
   color: #f4f7f8;
   font-size: 16px;
   text-align: center;
-  font-size: 16px;
   font-weight: 400;
   margin: 0;
 }
@@ -132,14 +131,6 @@ h3 {
   background-color: #11113a;
   border-radius: 16px 16px 0px 0px;
   margin: 24px 0px 0px 0px;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-.list-group-horizontal-md {
-  background-color: #11113a;
-  border-radius: 0px 0px 16px 16px;
-  border: none;
-  margin: 0px 0px 48px 0px;
   padding-left: 16px;
   padding-right: 16px;
 }

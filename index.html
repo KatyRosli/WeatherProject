@@ -44,17 +44,20 @@
       
       <h1 id="city">Täby </h1>
         <img src="http://openweathermap.org/img/wn/10d@2x.png" class="weathericon" id="icon"/>
-				<h2 class="cityweather" id="display-value">-1</span>°<span id="display-letter">C</h2>
+        <div id="main-temperature-row">
+				<h2><span class="cityweather" id="display-value">-1</span>°<span id="display-temperature-letter">C</span>
+          </h2>
+      </div>
       
-      <div><button type="button" id="view-button" class="btn btn-outline-primary">
+      <button type="button" id="view-button" class="btn btn-outline-primary">
         <strong>View in °<span id="view-temperature-letter">F</span></strong>
-      </button> </div>
+      </button>
       <h3>Last updated: <span id="date">Tue, 10:05</span></h3>
       <div class="row justify-content-center">
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-tint"></i><span id="humidity"> 75</span>%</h5>
+              <h5 class="card-title"><i class="fas fa-tint"></i> <span id="humidity"> 75</span>%</h5>
             </div>
           </div>
         </div>
@@ -69,42 +72,19 @@
       <div class="card">
         <div class="card-body">
           <div class="container">
-            <div class="row">
-              <div class="col-2">
+            <div class="row" id="forecast">
+              <!--<div class="col-2">
                 Now <br />
                 ⛅ <br />
                 -1°
-              </div>
-              <div class="col-2">
-                10am <br />
-                ⛅ <br />
-                -1°
-              </div>
-              <div class="col-2">
-                11am <br />
-                ⛅ <br />
-                -1°
-              </div>
-              <div class="col-2">
-                12pm <br />
-                ☁️ <br />
-                -1°
-              </div>
-              <div class="col-2">
-                1pm <br />
-                ☁️ <br />
-                -1°
-              </div>
-              <div class="col-2">
-                2pm <br />
-                ☁️ <br />
-                -1°
-              </div>
+              </div>-->
+              
             </div>
           </div>
         </div>
       </div>
-      <ul class="list-group list-group-horizontal">
+
+      <!--<ul class="list-group list-group-horizontal">
         <li class="list-group-item1">Today</li>
         <li class="list-group-item2 text-center d-inline-block">🌧️</li>
         <li class="list-group-item3"><strong>H: 4°</strong> L: -3°</li>
@@ -134,11 +114,11 @@
         <li class="list-group-item2 text-center d-inline-block">❄️</li>
         <li class="list-group-item3"><strong>H: 4°</strong> L: -3°</li>
       </ul>
-      <ul class="list-group list-group-horizontal-md">
+      <ul class="list-group list-group-horizontal-sm">
         <li class="list-group-item1">Sun, 9 Jan</li>
         <li class="list-group-item2 text-center d-inline-block">❄️</li>
         <li class="list-group-item3"><strong>H: 4°</strong> L: -3°</li>
-      </ul>
+      </ul>-->
       
       <script src="index.js"></script>
     </div>
