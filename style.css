@@ -6,7 +6,6 @@
   border-radius: 24px;
   font-family: "Karla", sans-serif;
 }
-
 .form-inline {
   margin: 8px 0px 24px 0px;
   width: 100%;
@@ -120,7 +119,12 @@ h3 {
   text-align: center;
   font-weight: 400;
   font-size: 16px;
-  display: block;
+  display: inline-block;
+  margin-right: 0;
+  margin-left: 0;
+  width: 94px;
+  padding: 0;
+  height: fit-content;
 }
 .list-group-horizontal-sm {
   background-color: #11113a;
@@ -135,7 +139,13 @@ h3 {
   padding-left: 16px;
   padding-right: 16px;
 }
-
+.bottom {
+  background-color: #11113a;
+  border-radius: 0px 0px 16px 16px;
+  margin: 24px 0px 0px 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 .list-group-item1 {
   padding: 16px 16px 16px 16px;
   background-color: #11113a;
@@ -172,7 +182,6 @@ h3 {
 .github-link {
   text-align: center;
 }
-
 .github {
   text-align: center;
   font-size: 16px;
@@ -181,7 +190,6 @@ h3 {
   padding-bottom: 80px;
   text-decoration: none;
 }
-
 .name {
   text-align: center;
   font-size: 16px;
