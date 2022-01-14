@@ -120,6 +120,7 @@ h3 {
   text-align: center;
   font-weight: 400;
   font-size: 16px;
+  display: block;
 }
 .list-group-horizontal-sm {
   background-color: #11113a;
