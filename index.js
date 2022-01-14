@@ -76,7 +76,7 @@ function showTemperature(response) {
   windElement.innerHTML = ` ${Math.round(response.data.wind.speed)}`;
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   console.log("getCityForecast: " + response.data.name);
@@ -116,8 +116,11 @@ function getCityForecast(city) {
 
 // display 6 forecast
 function showForecast(response) {
+  var myDiv = document.getElementById("forecast");
+  myDiv.innerHTML = "";
   let forecastElement = document.querySelector("#forecast");
   let forecastText = forecastElement.innerHTML;
+
   let index = 0;
   response.data.hourly.forEach((item) => {
     if (index < 6) {
@@ -133,7 +136,7 @@ function showForecast(response) {
       forecastText =
         forecastText +
         `<div class="col-2">${hours}<br />
-      <img src="http://openweathermap.org/img/wn/${
+      <img src="https://openweathermap.org/img/wn/${
         item.weather[0]["icon"]
       }@2x.png" class="weathericon" id="icon"/>
       ${Math.round(item.temp)}°</div>`;
