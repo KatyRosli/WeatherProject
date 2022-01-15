@@ -123,7 +123,6 @@ function showForecast(response) {
   let forecastText = forecastElement.innerHTML;
 
   let index = 0;
-  console.log(response.data);
   response.data.hourly.forEach((item) => {
     if (index < 6) {
       let date = new Date(item.dt * 1000);
