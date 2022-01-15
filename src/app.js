@@ -80,6 +80,7 @@ function showTemperature(response) {
   );
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   console.log("getCityForecast: " + response.data.name);
+
   // show city forecast
   getCityForecast(response.data.name);
 }
@@ -145,3 +146,5 @@ function showForecast(response) {
   });
   forecastElement.innerHTML = forecastText;
 }
+
+// display weekly climate

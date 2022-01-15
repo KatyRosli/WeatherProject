@@ -10,7 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <script
       src="https://kit.fontawesome.com/875bf62da1.js"
       crossorigin="anonymous"
@@ -78,12 +78,12 @@
         </div>
       </div>
 
-      <ul class="list-group list-group-horizontal">
+      <ul class="list-group list-group-horizontal" id="climate">
         <li class="list-group-item1">Today</li>
         <li class="list-group-item2 text-center d-inline-block">🌧️</li>
-        <li class="list-group-item3"><strong>H: 4°</strong> L: -3°</li>
+        <li class="list-group-item3"><strong>H: <span id="max temperature">4°</span></strong> L: <span id="min temperature"></span>-3°</li>
       </ul>
-      <ul class="list-group list-group-horizontal-sm">
+      <ul class="list-group list-group-horizontal-sm" id="climate">
         <li class="list-group-item1">Tue, 4 Jan</li>
         <li class="list-group-item2 text-center d-inline-block">🌤️</li>
         <li class="list-group-item3"><strong>H: 4°</strong> L: -3°</li>
@@ -114,7 +114,7 @@
         <li class="list-group-item3"><strong>H: 4°</strong> L: -3°</li>
       </ul>
       
-      <script src="index.js"></script>
+      <script src="src/app.js"></script>
     </div>
     <div class="github-link">
       <a class= "github"
