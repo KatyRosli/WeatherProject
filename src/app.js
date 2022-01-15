@@ -106,7 +106,6 @@ locationButton.addEventListener("click", getCurrentLocation);
 function getCityForecast(city) {
   let apiKey = "313875bf8edc10d6e458db37d82896b3";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-  console.log("getCityForecast:" + url);
   axios.get(url).then((resp) => {
     let url2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${resp.data.coord.lat}&lon=${resp.data.coord.lon}&units=metric&appid=${apiKey}`;
     axios.get(url2).then((resp) => {
