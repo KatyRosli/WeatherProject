@@ -18,14 +18,18 @@ function formatDate(timestamp) {
 //display search result city & temperature
 function showSearchFormValues(event) {
   event.preventDefault();
-  let cityElement = document.querySelector("#city");
   let cityInput = document.querySelector("#city-input");
+  searchCity(cityInput.value);
+}
+
+function searchCity(city) {
+  let cityElement = document.querySelector("#city");
   document.querySelector("#display-temperature-letter").innerHTML = "C";
   document.querySelector("#view-temperature-letter").innerHTML = "F";
-  cityElement.innerHTML = cityInput.value;
+  cityElement.innerHTML = city;
 
   let apiKey = "313875bf8edc10d6e458db37d82896b3";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=metric&appid=${apiKey}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(url).then(showTemperature);
 }
 
@@ -100,8 +104,6 @@ function getCurrentLocation() {
 
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", getCurrentLocation);
-
-//getCurrentLocation();
 
 function getCityForecast(city) {
   let apiKey = "313875bf8edc10d6e458db37d82896b3";
@@ -178,3 +180,5 @@ function showForecast(response) {
   });
   climateElement.innerHTML = climateText;
 }
+
+searchCity("Stockholm");
