@@ -101,7 +101,7 @@ function getCurrentLocation() {
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", getCurrentLocation);
 
-getCurrentLocation();
+//getCurrentLocation();
 
 function getCityForecast(city) {
   let apiKey = "313875bf8edc10d6e458db37d82896b3";
@@ -117,17 +117,17 @@ function getCityForecast(city) {
 
 // display 6 forecast
 function showForecast(response) {
-  var myDiv = document.getElementById("forecast");
-  myDiv.innerHTML = "";
+  var myUl = document.getElementById("forecast");
+  myUl.innerHTML = "";
   let forecastElement = document.querySelector("#forecast");
   let forecastText = forecastElement.innerHTML;
 
   let index = 0;
+  console.log(response.data);
   response.data.hourly.forEach((item) => {
     if (index < 6) {
       let date = new Date(item.dt * 1000);
       let hours = date.getHours();
-
       if (index == 0) {
         hours = "now";
       } else if (hours < 10) {
@@ -139,12 +139,42 @@ function showForecast(response) {
         `<div class="col-2">${hours}<br />
       <img src="https://openweathermap.org/img/wn/${
         item.weather[0]["icon"]
-      }@2x.png" class="weathericon" id="icon"/>
+      }@2x.png" class="forecasticon" id="icon"/> </br>
       ${Math.round(item.temp)}°</div>`;
     }
-    index++;
+    index = index + 1;
   });
   forecastElement.innerHTML = forecastText;
-}
 
-// display weekly climate
+  // display weekly climate
+  var myUl = document.getElementById("climate");
+  myUl.innerHTML = "";
+  let climateElement = document.querySelector("#climate");
+  let climateText = climateElement.innerHTML;
+
+  let num = 0;
+  response.data.daily.forEach((item) => {
+    if (num < 7) {
+      let date = new Date(item.dt * 1000);
+      let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      let day = days[date.getDay()];
+      let da = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(date);
+      let mo = new Intl.DateTimeFormat("en", { month: "short" }).format(date);
+      climateText =
+        climateText +
+        `<ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item flex-fill">${day} ${da} ${mo}</li>
+        <li class="list-group-item text-center d-inline-block"><img src="https://openweathermap.org/img/wn/${
+          item.weather[0]["icon"]
+        }@2x.png" class="climateicon" id="iconTwo"></li>
+        <li class="list-group-item flex-fill"><strong> Max:<span id="max temperature"> ${Math.round(
+          item.temp.max
+        )}°</span></strong> Min:<span id="min temperature"></span> ${Math.round(
+          item.temp.min
+        )}°</li>
+        </ul>
+        <br>`;
+    }
+  });
+  climateElement.innerHTML = climateText;
+}

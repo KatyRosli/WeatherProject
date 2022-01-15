@@ -129,55 +129,21 @@ h3 {
 .list-group-horizontal-sm {
   background-color: #11113a;
   border: none;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 8px;
+  flex-direction: row;
+  min-width: 576px;
 }
-.list-group-horizontal {
-  background-color: #11113a;
-  border-radius: 16px 16px 0px 0px;
-  margin: 24px 0px 0px 0px;
-  padding-left: 16px;
-  padding-right: 16px;
+.list-group {
+  display: flex;
 }
-.bottom {
-  background-color: #11113a;
-  border-radius: 0px 0px 16px 16px;
-  margin: 24px 0px 0px 0px;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-.list-group-item1 {
-  padding: 16px 16px 16px 16px;
+.list-group-item {
+  padding: 16px 0 0 0;
   background-color: #11113a;
   color: #f4f7f8;
   font-size: 20px;
   list-style-type: none;
-  width: 100%;
-  text-align: left;
-}
-.list-group-item2 {
-  padding: 16px 0px 16px 0px;
-  background-color: #11113a;
-  color: #f4f7f8;
-  font-size: 20px;
-  list-style-type: none;
-  width: 100%;
+  display: block;
   text-align: center;
-}
-.list-group-item3 {
-  padding: 16px 16px 16px 16px;
-  background-color: #11113a;
-  color: #f4f7f8;
-  font-size: 20px;
-  list-style-type: none;
-  width: 100%;
-  text-align: right;
-}
-.open-source-code {
-  text-align: center;
-  padding-bottom: 80px;
-  font-size: 16px;
-  font-weight: 700;
 }
 .github-link {
   text-align: center;
@@ -196,4 +162,11 @@ h3 {
   font-weight: 700;
   color: #11113a;
   text-decoration: none;
+}
+.forecasticon {
+  display: inline-block;
+  width: 48px;
+}
+.climateicon {
+  width: 48px;
 }
