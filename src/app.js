@@ -61,7 +61,6 @@ convertButton.addEventListener("click", convertTemperature);
 
 //show current location & temperature & show from search
 function showTemperature(response) {
-  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let displayValueElement = document.querySelector("#display-value");
   let cityElement = document.querySelector("#city");
@@ -83,7 +82,6 @@ function showTemperature(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  console.log("getCityForecast: " + response.data.name);
 
   // show city forecast
   getCityForecast(response.data.name);
