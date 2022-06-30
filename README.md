@@ -1,9 +1,9 @@
-# Ecommerce Fashion Website : 🛍️
+# ⛅ Weather App:
 - A dynamic website with carousel (slideshow) to capture Users attention to shop the look on the carousel images. The ecommerce fashion website: silverspoon are both user friendly and responsive for all types of devices: desktop, tablet and mobile. 
 
 - If there's more time: make it responsive, make the CTA works & implement the "Our Other Lines" components.
 
-![screenshot](./DTHome.jpg)
+![screenshot](./WeatherApp.png)
 
 # Built with 🛠️:
 - HTML
