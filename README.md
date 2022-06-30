@@ -1,11 +1,11 @@
 # ⛅ Weather App:
-- A dynamic website with carousel (slideshow) to capture Users attention to shop the look on the carousel images. The ecommerce fashion website: silverspoon are both user friendly and responsive for all types of devices: desktop, tablet and mobile. 
-
-- If there's more time: make it responsive, make the CTA works & implement the "Our Other Lines" components.
+- A weather app designed and coded for responsive and user friendly users to be used across all types of devices. By default, the app will show the Stockholm current temperature. Users are able to click/tap on the get location button and app will display User's current city temperature. This app also
+have many components: current temperature, the next few hours temperature, within 1 week temperature.
 
 ![screenshot](./WeatherApp.png)
 
 # Built with 🛠️:
+- Figma
 - HTML
 - CSS
 - Bootstrap
